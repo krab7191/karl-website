@@ -1,44 +1,30 @@
 <script>
-  import {
-    Navbar,
-    NavBrand,
-    NavHamburger,
-    NavUl,
-    NavLi,
-    Skeleton,
-    ImagePlaceholder,
-    TextPlaceholder,
-  } from "flowbite-svelte";
+  // Local imports
+  import Footer from "../components/Footer.svelte";
+  import Header from "../components/Header.svelte";
 </script>
 
-<div class="">
-  <Navbar
-    navClass="px-2 sm:px-4 py-2.5 absolute w-full z-20 top-0 left-0 border-b"
-    let:hidden
-    let:toggle
-  >
-    <NavBrand href="/">
-      <img
-        src="/flying.jpg"
-        class="mr-3 h-6 sm:h-9"
-        alt="Flowbite Logo"
-      />
-      <span
-        class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
-        >Meta Mind Works</span
-      >
-    </NavBrand>
-    <NavHamburger on:click={toggle} />
-    <NavUl {hidden}>
-      <NavLi href="/" active={true}>Home</NavLi>
-      <NavLi href="/projects">Projects</NavLi>
-      <NavLi href="/gallery">Gallery</NavLi>
-    </NavUl>
-  </Navbar>
-</div>
-
-<slot />
-
+<Header />
+<main class="overflow-auto dark:bg-gray-800 dark:text-white">
+  <!-- Page content rendered in here -->
+  <slot />
+</main>
+<Footer />
 
 <style>
+  main {
+    padding: 5rem 1.5rem;
+    height: 100vh;
+    width: 100vw;
+  }
+  @media (min-width: 640px) {
+    main {
+      padding: 5.5rem 2rem;
+    }
+  }
+  @media (min-width: 768px) {
+    main {
+      padding: 7rem 2rem;
+    }
+  }
 </style>
