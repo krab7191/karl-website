@@ -36,13 +36,13 @@
     }
   };
 
-  const clickHandler = ({ target }: any) => {
-    const { tagName } = target;
-    if (tagName === "IMG") {
-      carouselOpen = true;
-    }
-  };
-
+  // BUGGY: disable for now.
+  // const clickHandler = ({ target }: any) => {
+  //   const { tagName } = target;
+  //   if (tagName === "IMG") {
+  //     carouselOpen = true;
+  //   }
+  // };
 </script>
 
 {#if carouselOpen}
@@ -87,18 +87,14 @@
     {/each}
   </div>
 
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div on:click={clickHandler}>
-    <Gallery class="gap-4 grid-cols-2 md:grid-cols-4">
-      {#each $filteredCols as imgs}
-        {#if imgs.length > 0}
-          <Gallery
-            items={imgs}
-            imgClass="cursor-pointer h-auto max-w-full rounded-lg"
-          />
-        {/if}
-      {/each}
-    </Gallery>
-  </div>
+  <Gallery class="gap-4 grid-cols-2 md:grid-cols-4">
+    {#each $filteredCols as imgs}
+      {#if imgs.length > 0}
+        <Gallery
+          items={imgs}
+          imgClass="cursor-pointer h-auto max-w-full rounded-lg"
+        />
+      {/if}
+    {/each}
+  </Gallery>
 {/if}

@@ -10,10 +10,11 @@
 
 <style>
   .gallery {
-    max-width: 48rem;
+    max-width: 112rem;
     margin: 0 auto;
   }
   hr {
-    margin: 1rem 0;
+    max-width: 48rem;
+    margin: 1rem auto;
   }
 </style>
