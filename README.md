@@ -14,8 +14,9 @@
 
 ### Development instructions
 
-1. Install [Node](https://nodejs.org/en/download) + NPM, & [GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-2. Update Node + npm versions to match `package.json` "engines" (can use [NVM](https://github.com/nvm-sh/nvm))
-3. Pull source code
-4. Run `npm i` in project root
-5. Run `npm run dev`
+1. Install [Node](https://nodejs.org/en/download) + NPM (comes when you install git), & [GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. (OPTIONAL) -> Update Node + npm versions to match `package.json` "engines" (can use [NVM](https://github.com/nvm-sh/nvm))
+3. Clone repository (either HTTPS, SSH, GH CLI, or Github desktop)
+4. Change directory into the project root (with terminal or git bash): `cd karl-website`
+5. Run `npm i` in project root
+6. Run `npm run dev`

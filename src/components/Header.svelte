@@ -9,7 +9,7 @@
     DarkMode,
   } from "flowbite-svelte";
 
-  const links = ["Home", "Projects", "Gallery"];
+  const links = ["Home", "Gallery"];
   let active = "Home";
   let hidden = true;
 

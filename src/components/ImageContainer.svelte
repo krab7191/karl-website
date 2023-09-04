@@ -22,7 +22,7 @@
     {
       alt: "soft start board",
       src: "/soft_start_board.jpg",
-      type: "Mechanical",
+      type: "Amplifiers",
     },
     { alt: "forex 2", src: "/forex_1.png", type: "Forex" },
   ];
