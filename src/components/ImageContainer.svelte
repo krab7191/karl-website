@@ -1,36 +1,15 @@
 <script lang="ts">
   // Dependency imports
-  import { Gallery, Button } from "flowbite-svelte";
+  import { Gallery, Button, CarouselTransition } from "flowbite-svelte";
+  import { CloseOutline } from "flowbite-svelte-icons";
 
-  type Category = "All" | "Forex" | "Speakers" | "Amplifiers" | "Mechanical";
-  type Img = {
-    alt: string;
-    src: string;
-    type: string;
-  };
+  // Local imports
+  import type { Category } from "../data/imgData";
+  import { images, imgCols } from "../data/imgData";
+  import { useState } from "../hooks/state";
 
-  const images = [
-    { alt: "flying", src: "flying.jpg", type: "" },
-    { alt: "speakers", src: "/speakers.jpg", type: "Speakers" },
-
-    { alt: "tube amp", src: "tube_amp.jpg", type: "Amplifiers" },
-    { alt: "forex", src: "forex.png", type: "Forex" },
-
-    { alt: "tube amp 2", src: "tube_amp_1.jpg", type: "Amplifiers" },
-    { alt: "engine", src: "/engine.jpg", type: "Mechanical" },
-
-    {
-      alt: "soft start board",
-      src: "/soft_start_board.jpg",
-      type: "Amplifiers",
-    },
-    { alt: "forex 2", src: "/forex_1.png", type: "Forex" },
-  ];
-
-  let images1: Array<Img>;
-  let images2: Array<Img>;
-  let images3: Array<Img>;
-  let images4: Array<Img>;
+  const [filteredImgs, setFilteredImgs]: any = useState(images);
+  const [filteredCols, setFilteredCols]: any = useState(imgCols);
 
   const categories: Array<Category> = [
     "All",
@@ -39,47 +18,83 @@
     "Amplifiers",
     "Mechanical",
   ];
-  let current = "All";
-
-  const reset = () => {
-    images1 = [images[0], images[1]];
-    images2 = [images[2], images[3]];
-    images3 = [images[4], images[5]];
-    images4 = [images[6], images[7]];
-  };
+  $: current = "All";
+  let carouselOpen = false;
 
   const setFilter = (cat: Category) => {
     current = cat;
     if (cat === "All") {
-      reset();
+      setFilteredImgs(images);
+      setFilteredCols(imgCols);
     } else {
-      reset();
-      images1 = images1.filter((img) => img.type === cat);
-      images2 = images2.filter((img) => img.type === cat);
-      images3 = images3.filter((img) => img.type === cat);
-      images4 = images4.filter((img) => img.type === cat);
+      setFilteredImgs(images.filter((img) => img.category === cat));
+      const newCols: any = [];
+      imgCols.forEach((col) => {
+        newCols.push(col.filter((img) => img.category === cat));
+      });
+      setFilteredCols(newCols);
     }
   };
-  reset();
+
+  // BUGGY: disable for now.
+  // const clickHandler = ({ target }: any) => {
+  //   const { tagName } = target;
+  //   if (tagName === "IMG") {
+  //     carouselOpen = true;
+  //   }
+  // };
 </script>
 
-<div
-  class="flex items-center justify-center py-4 md:py-8 flex-wrap gap-3 mb-3 mx-auto"
->
-  {#each categories as category}
+{#if carouselOpen}
+  <div class="max-w-4xl relative">
     <Button
-      pill
+      color="primary"
+      pill={true}
+      outline={true}
+      class="!p-2 absolute z-40 -top-5 -right-5 bg-white"
       size="xl"
-      outline={category == current}
-      color={category == current ? undefined : "alternative"}
-      on:click={() => setFilter(category)}>{category}</Button
+      on:click={() => {
+        carouselOpen = false;
+      }}
     >
-  {/each}
-</div>
+      <CloseOutline />
+    </Button>
+    <CarouselTransition
+      images={$filteredImgs}
+      showCaptions={false}
+      showThumbs={false}
+      showIndicators={false}
+      loop
+      duration={5000}
+      transitionType="blur"
+      transitionParams={{ duration: 250 }}
+    />
+  </div>
+{:else}
+  <div
+    class="flex items-center justify-center py-4 md:py-8 flex-wrap gap-3 mb-3 mx-auto"
+  >
+    {#each categories as category}
+      <Button
+        pill
+        size="xl"
+        outline={category === current}
+        color={category === current ? undefined : "alternative"}
+        on:click={() => setFilter(category)}
+      >
+        {category}
+      </Button>
+    {/each}
+  </div>
 
-<Gallery class="gap-4 grid-cols-2 md:grid-cols-4">
-  <Gallery items={images1} />
-  <Gallery items={images2} />
-  <Gallery items={images3} />
-  <Gallery items={images4} />
-</Gallery>
+  <Gallery class="gap-4 grid-cols-2 md:grid-cols-4">
+    {#each $filteredCols as imgs}
+      {#if imgs.length > 0}
+        <Gallery
+          items={imgs}
+          imgClass="cursor-pointer h-auto max-w-full rounded-lg"
+        />
+      {/if}
+    {/each}
+  </Gallery>
+{/if}
