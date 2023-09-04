@@ -14,64 +14,64 @@ const img1: Img = {
   id: 0,
   alt: "flying",
   attribution: "flying",
-  src: "/flying.jpg",
-  imgurl: "/flying.jpg",
+  src: "/flying.webp",
+  imgurl: "/flying.webp",
   category: '',
 };
 const img2: Img = {
   id: 1,
   alt: "speakers",
   attribution: "speakers",
-  src: "/speakers.jpg",
-  imgurl: "/speakers.jpg",
+  src: "/speakers.webp",
+  imgurl: "/speakers.webp",
   category: "Speakers",
 };
 const img3: Img = {
   id: 2,
   alt: "tube amp",
   attribution: "tube amp",
-  src: "/tube_amp.jpg",
-  imgurl: "/tube_amp.jpg",
+  src: "/tube_amp.webp",
+  imgurl: "/tube_amp.webp",
   category: "Amplifiers",
 };
 const img4: Img = {
   id: 3,
   alt: "forex",
   attribution: "forex",
-  src: "/forex.png",
-  imgurl: "/forex.png",
+  src: "/forex.webp",
+  imgurl: "/forex.webp",
   category: "Forex",
 };
 const img5: Img = {
   id: 4,
   alt: "tube amp 2",
   attribution: 'tube amp 2',
-  src: "/tube_amp_1.jpg",
-  imgurl: '/tube_amp_1.jpg',
+  src: "/tube_amp_1.webp",
+  imgurl: '/tube_amp_1.webp',
   category: "Amplifiers",
 };
 const img6: Img = {
   id: 5,
   alt: "engine",
   attribution: "engine",
-  src: "/engine.jpg",
-  imgurl: '/engine.jpg',
+  src: "/engine.webp",
+  imgurl: '/engine.webp',
   category: "Mechanical",
 };
 const img7: Img = {
   id: 6,
   alt: "soft start board",
   attribution: "soft start board",
-  src: "/soft_start_board.jpg",
-  imgurl: "/soft_start_board.jpg",
+  src: "/soft_start_board.webp",
+  imgurl: "/soft_start_board.webp",
   category: "Amplifiers",
 };
 const img8: Img = {
   id: 7,
   alt: "forex 2",
   attribution: "forex 2",
-  src: "/forex_1.png",
-  imgurl: '/forex_1.png',
+  src: "/forex_1.webp",
+  imgurl: '/forex_1.webp',
   category: "Forex",
 };
 
