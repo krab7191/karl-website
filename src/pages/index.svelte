@@ -1,7 +1,8 @@
 <div class="home">
   <h1 class="text-center">Meta Mind Works</h1>
   <hr />
-  <div>Karl Rabe - Amplifiers, Speaker Design, Forex Trading</div>
+  <div>A repository of some of my personal projects.
+</div>
 </div>
 
 <style>
