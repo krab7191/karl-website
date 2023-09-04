@@ -20,3 +20,13 @@
 4. Change directory into the project root (with terminal or git bash): `cd karl-website`
 5. Run `npm i` in project root
 6. Run `npm run dev`
+
+#### Git basics (in git bash)
+
+1. Check out a new branch with `git checkout -b <branch name>`
+2. Make changes
+3. Add changes with `git add <file names>`
+4. Commit changes with `git commit -m "commit message here"`
+5. Push changes with `git push -u origin <branch name>`
+
+Then go to github and create a pull request
