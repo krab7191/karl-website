@@ -13,7 +13,12 @@
 </script>
 
 <div class="card">
-  <Card img={imgSrc} href={slug} horizontal class="mb-4 mt-4 max-h-64 anchor-card text-ellipsis">
+  <Card
+    img={imgSrc}
+    href={slug}
+    horizontal
+    class="max-h-96 overflow-hidden anchor-card"
+  >
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
     >
@@ -27,7 +32,14 @@
 
 <style>
   .card {
-    text-overflow: ellipsis;
-    margin: 2rem;
+    margin-top: 2rem;
+
+    /* Testing... */
+    /* background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.7959558823529411) 100%
+    ); */
   }
 </style>
