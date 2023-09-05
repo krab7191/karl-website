@@ -18,9 +18,9 @@
     twenties, at the behest of a friend, I was cajoled into acquiring my series
     6 securities license and subsequently did work in a bond house for a short
     while. Later I returned to college to study of electrical engineering and
-    ended up working in RF and Acoustics design and research (at Ericsson.) Extra
-    curricular activities include dance, improvisational acting, and generally
-    being physical in the out-of-doors.
+    ended up working in RF and Acoustics research and design (at Ericsson.)
+    Extra curricular activities include dance, improvisational acting, and
+    generally being physical in the out-of-doors.
   </p>
 </div>
 
