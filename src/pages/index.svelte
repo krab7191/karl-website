@@ -6,7 +6,7 @@
   <p>Personal background:</p>
   &nbsp;
   <p>
-    Described as an autodidactic polylog, I showed an interest in the sciences
+    Described as an autodidactic polymath, I showed an interest in the sciences
     at age 4 by cutting through a live electrical lampcord with cuticle scissors
     (grandma wasn't happy with that). Weaned on crystal radios and vacuum tube
     equipment, I was raised in an environment where wood working, car repairs,
