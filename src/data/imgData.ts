@@ -62,8 +62,8 @@ const img7: Img = {
   id: 6,
   alt: "soft start board",
   attribution: "soft start board",
-  src: "/soft_start_board.webp",
-  imgurl: "/soft_start_board.webp",
+  src: "/soft_start.webp",
+  imgurl: "/soft_start.webp",
   category: "Amplifiers",
 };
 const img8: Img = {

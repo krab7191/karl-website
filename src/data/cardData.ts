@@ -72,7 +72,7 @@ const amplifiers: CardData = {
   }, {
     id: 2,
     attribution: 'Soft start board',
-    imgurl: '/soft_start.webp'
+    imgurl: '/soft_start_horizontal.webp'
   }]
 };
 
