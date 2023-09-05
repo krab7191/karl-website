@@ -12,7 +12,7 @@
   }
 </script>
 
-<div class="card max-h-64">
+<div class="card">
   <Card img={imgSrc} href={slug} horizontal class="mb-4 mt-4 max-h-64 anchor-card text-ellipsis">
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"

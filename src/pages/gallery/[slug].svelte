@@ -32,13 +32,13 @@
     {#if content.images}
       <CarouselTransition
         images={content.images}
-        true
+        loop
         showCaptions={false}
         showThumbs={false}
         showIndicators={false}
         duration={5000}
         transitionType="blur"
-        transitionParams={{ duration: 250 }}
+        transitionParams={{ duration: 750 }}
       />
     {:else}
       <Gallery class="gap-4">
