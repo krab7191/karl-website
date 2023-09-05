@@ -54,7 +54,9 @@
       <p>{content.text}</p>
     {:else}
       {#each content.text as txt}
-        <p>{txt}</p>
+        <p class={txt.slice(0, 8) === "<center>" ? "text-center" : ""}>
+          {txt.replace("<center>", "")}
+        </p>
       {/each}
     {/if}
   </div>
