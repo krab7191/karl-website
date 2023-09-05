@@ -3,11 +3,11 @@ export type Category = "All" | "Forex" | "Speakers" | "Amplifiers" | "Mechanical
 
 export type Img = {
   id: number;
-  alt: string;
+  alt?: string;
   attribution: string;
-  src: string;
+  src?: string;
   imgurl: string
-  category: Category;
+  category?: Category;
 };
 
 const img1: Img = {

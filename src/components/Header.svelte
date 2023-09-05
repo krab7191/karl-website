@@ -8,15 +8,34 @@
     NavLi,
     DarkMode,
   } from "flowbite-svelte";
+  import { afterPageLoad } from "@roxi/routify";
 
   const links = ["Home", "Gallery"];
-  let active = "Home";
+  let active = "";
   let hidden = true;
+
+  $afterPageLoad((page) => {
+    const path = page?.path as string;
+    setActiveLink(path);
+  });
+
+  // Fns
+  const setActiveLink = (path: string) => {
+    if (path === "/index") {
+      active = "/";
+    } else {
+      active = path;
+    }
+  };
 
   const linkHandler = (e: any) => {
     const { innerText } = e.target;
     if (innerText) {
-      active = innerText;
+      if (innerText === "Home") {
+        active = "/";
+      } else {
+        active = `/${innerText.toLowerCase()}`;
+      }
     }
     hidden = true;
   };
@@ -25,6 +44,7 @@
     hidden = !hidden;
   };
 
+  // Tailwinds classes
   let activeLiClass =
     "mt-3 text-white bg-purple-700 md:bg-transparent md:text-purple-700 md:dark:text-white dark:bg-purple-600 md:dark:bg-transparent dark:hover:text-white";
   let nonActiveLiClass =
@@ -43,14 +63,10 @@
     >
   </NavBrand>
   <NavHamburger on:click={toggle} />
-  <NavUl
-    {hidden}
-    activeUrl={active === "Home" ? "/" : `/${active.toLowerCase()}`}
-  >
+  <NavUl {hidden} activeUrl={active}>
     {#each links as link}
       <NavLi
         href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
-        active={link === active}
         on:click={linkHandler}
         activeClass={activeLiClass}
         nonActiveClass={nonActiveLiClass}
