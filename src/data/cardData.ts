@@ -32,9 +32,9 @@ const forex: CardData = {
 
     'After examining, researching, and modifying both common and esotaric indicators and contemplating filtering techniques, I settled on writing and using my own indicators as my primary trading tools.',
 
-    'To forestall having to page through a myriad of charts, and also to make the trading experience more relaxed and comprehensive, I developed a dashboard that allows the monitoring of large groupings of currency pairs at one glance.  This dashboard supplies pertinent data in an easy to read format.  Expert advisors have been written and are also under development.',
+    'To forestall having to page through myriad charts, and also to make the trading experience more relaxed and comprehensive, I developed a dashboard that allows the monitoring of large groupings of currency pairs at one glance.  This dashboard supplies pertinent data in an easy to read format.  Expert advisors have been written and are also under development.',
 
-    'A beta version of the dashboard is scheduled to go public in the fourth quarter of 2023'
+    'A beta version of the dashboard is scheduled to go public in the fourth quarter of 2023.'
   ],
   images: [
     {
@@ -59,7 +59,7 @@ const amplifiers: CardData = {
 
     '<center>Turn on delay circuit.',
 
-    'Tube life is compromised when high voltage (HV) is applied to the anodes before the cathodes are up to temperature.  To deal with that, I added a microcontrolled circuit that senses the rectified zero crossing voltage and then, after a set delay time, slowly ramps up the HV.  This slow stepped turn on also helps minimize surge currents and component stresses.'
+    'Tube life is compromised when high voltage (HV) is applied to the anodes before the cathodes are up to temperature.  To deal with that, I added an Atmel AT-tiny microcontroller circuit that senses the rectified zero crossing voltage and then, after a set delay time, slowly ramps up the HV. This slow stepped turn-on also helps minimize surge currents and component stresses.'
   ],
   images: [{
     id: 0,
