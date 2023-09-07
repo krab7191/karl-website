@@ -20,7 +20,7 @@ const mechanical: CardData = {
   slug: '/gallery/mechanical',
   heading: 'Mechanics, handyman, "no - et al"  :p',
   text:
-    'This photo was taken during a repair as a reference to insure the correct alignment of the two timing chains during the replacement of the balance shafts in my present car and represents the wide scope of abilities and experience in my life.  My childhood home included both wood and metal working equipment and both a stick and an oxy-acetylene rig.  Vehicle and appliance repairs were the norm.  My father was a co-owner of a company that manufactured air-impact pulverizers and at one point, rented out a section of the facility where I met aeronautical engineer Dr. Alexander Lippisch (of Messerschmitt Me 163 fame) as I watched the building and test flight of a prototype ground effect aircraft.  I operated a milling machine and was given the controls of an airplane before entering high school.  Over the years, I have done full engine rebuilds, HVAC repairs, modified expansion chambers, and so much more.'
+    'This photo was taken during a repair as a reference to insure the correct alignment of the two timing chains during the replacement of the balance shafts in the engine of my present car and represents the wide scope of abilities and experience in my life.  My childhood home included both wood and metal working equipment and both a stick and an oxy-acetylene rig.  Vehicle and appliance repairs were the norm.  My father was a co-owner of a company that manufactured air-impact pulverizers and at one point, rented out a section of the facility where I met aeronautical engineer Dr. Alexander Lippisch (of Messerschmitt Me 163 fame) as I watched the building and test flight of a prototype ground effect aircraft.  I operated a milling machine and was given the controls of an airplane before entering high school.  Over the years, I have done full engine rebuilds, HVAC repairs, modified expansion chambers, and so much more.'
 };
 
 const forex: CardData = {
@@ -65,12 +65,14 @@ const amplifiers: CardData = {
     id: 0,
     attribution: 'Tube amplifier',
     imgurl: '/tube_amp.webp'
-  }, {
+  }, 
+  // {
+  //   id: 1,
+  //   attribution: 'Tube amplifier',
+  //   imgurl: '/tube_amp_1.webp'
+  // },
+  {
     id: 1,
-    attribution: 'Tube amplifier',
-    imgurl: '/tube_amp_1.webp'
-  }, {
-    id: 2,
     attribution: 'Soft start board',
     imgurl: '/soft_start_horizontal.webp'
   }]
