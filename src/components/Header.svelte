@@ -57,7 +57,7 @@
   on:toggle={toggle}
 >
   <NavBrand href="/">
-    <img src="/flying_small.webp" class="mr-3 h-6 sm:h-9" alt="Flying" />
+    <img src="/flying_small.webp" height='36px' width='42px' class="mr-3 h-6 sm:h-9" alt="Flying" />
     <span
       class="self-center whitespace-nowrap text-xl font-semibold dark:text-white ml-3"
       >Meta Mind Works</span
