@@ -112,13 +112,6 @@
     max-width: calc(100vw - 10rem);
     max-height: calc(100vh - 170px);
   }
-  /* TODO - more testing */
-  @media (min-height: 640px) {
-    .imgContainer > img,
-    .single-image {
-      max-width: 48rem;
-    }
-  }
   .single-image {
     margin: 0 auto;
   }

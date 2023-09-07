@@ -14,7 +14,7 @@
 <style>
   main {
     padding: 5rem 1.5rem;
-    height: 100vh;
+    height: calc(100vh - 50px);
     width: 100vw;
   }
   @media (min-width: 640px) {
