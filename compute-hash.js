@@ -26,15 +26,15 @@ fs.readdir('./dist/assets', function (err, files) {
     console.log(headerString);
 
     const netlify_toml = `
-    [[redirects]]
-      from = "/*"
-      to = "/index.html"
-      status = 200
-  
-    [[headers]]
-      for = "/*"
-      [headers.values]
-        Content-Security-Policy = ${headerString}
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = ${headerString}
     `;
     fs.writeFileSync('./netlify.toml', netlify_toml);
   } catch (err) {
