@@ -2,3 +2,8 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src metamindworks.com;media-src metamindworks.com;style-src 'self';img-src *;frame-src 'none';script-src https://netlify-rum.netlify.app"
