@@ -6,4 +6,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src metamindworks.com;media-src metamindworks.com;style-src 'self';img-src *;frame-src 'none';script-src https://netlify-rum.netlify.app"
+    Content-Security-Policy = "default-src metamindworks.com;media-src metamindworks.com;style-src metamindworks.com;img-src *;frame-src 'none';script-src https://netlify-rum.netlify.app metamindworks.com"
