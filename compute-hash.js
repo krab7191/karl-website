@@ -12,7 +12,7 @@ async function checksumFile(path) {
 }
 
 function write_toml (css, js) {
-  const headerString = `"default-src https://metamindworks.com;media-src https://metamindworks.com;style-src ${css.join(' ')};img-src *;frame-src 'none';script-src https://netlify-rum.netlify.app ${js.join(' ')}"`;
+  const headerString = `"default-src https://metamindworks.com;media-src https://metamindworks.com;style-src ${css.join(' ')};img-src *;frame-src 'none';script-src 'unsafe-hashes' 'https://netlify-rum.netlify.app' ${js.join(' ')}"`;
 
   const netlify_toml = `
 [[redirects]]
