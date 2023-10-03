@@ -7,6 +7,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src https://metamindworks.com;media-src https://metamindworks.com;style-src 'unsafe-inline';img-src *;frame-src 'none';script-src 'unsafe-hashes' https://netlify-rum.netlify.app 'sha256-kxPgn7/tONTgDHG++u0uB8gGD7153vnOQzpWDxvFqqE=' 'sha256-Y378enINhv/HNN2KNWjLkUokRaPDn47bp7fuMG17Tbg=' 'sha256-Dig+z9XAix+MtbN5J4W6+Wv/cOm1zt1jfGGAfXsDvvg=' 'sha256-UINbzIh02L12JUpMjkKJi88ODyzWIiZcu8frGclUkb8=' 'sha256-O/Wrllar2XPzQ7Vy5leAWUt8zjPwR7Rdjx0aCYSFWEM=' 'sha256-Bj2Xwub8+CMBTLBJ7i+R8+OJcPo5VXvGT11+BvWahwQ=' 'sha256-J4Oe1Am9jMnfW6H+8VNVdEIvOSC97ak0dXLhqgh0mkg=' 'sha256-DoeWEOnJOr2a4/xckfJ5sm9HbUFiog6TnVOukdOI61I=' 'sha256-F179tzhe0mBwdEAOcHkZuMQ4sbGCzSvNspZ/G+lGa1M='"
+    Content-Security-Policy = "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-src 'self';"
 
     

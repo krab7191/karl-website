@@ -4,8 +4,6 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "precompute-hash": "npm run build",
-    "compute-hash": "node ./compute-hash.js && git add netlify.toml",
     "dev": "run-p dev:*",
     "dev:vite": "vite",
     "dev:routify": "routify",
@@ -34,8 +32,5 @@
     "tslib": "^2.6.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
-  },
-  "pre-commit": [
-    "compute-hash"
-  ]
+  }
 }
