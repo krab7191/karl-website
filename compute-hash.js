@@ -11,8 +11,8 @@ async function checksumFile(path) {
   });
 }
 
-function write_toml (js) {
-  const headerString = `"default-src https://metamindworks.com;media-src https://metamindworks.com;style-src 'unsafe-inline';img-src *;frame-src 'none';script-src 'unsafe-hashes' https://netlify-rum.netlify.app ${js.join(' ')}"`;
+function write_toml (css, js) {
+  const headerString = `"default-src https://metamindworks.com;media-src https://metamindworks.com;style-src 'unsafe-inline' ${css.join(' ')};img-src *;frame-src 'none';script-src 'unsafe-hashes' https://netlify-rum.netlify.app ${js.join(' ')}"`;
 
   const netlify_toml = `
 [[redirects]]
@@ -35,7 +35,7 @@ readdir('./dist/assets', async function (err, files) {
     if (err) {
       throw err;
     }
-    // const css_hashes = [];
+    const css_hashes = [];
     const js_hashes = [];
     
     await files.forEach(async (file, idx) => {
@@ -43,9 +43,11 @@ readdir('./dist/assets', async function (err, files) {
 
       if (file.slice(-3) === '.js') {
         js_hashes.push(`'sha256-${hash}'`);
+      } else {
+        css_hashes.push(`'sha256-${hash}'`);
       }
       if (idx === len - 1) {
-        write_toml(js_hashes);
+        write_toml(css_hashes, js_hashes);
       }
     });
   } catch (err) {
