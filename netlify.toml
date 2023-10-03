@@ -8,10 +8,3 @@
   for = "/*"
   [headers.values]
     Content-Security-Policy = "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'unsafe-inline' 'self'; style-src 'unsafe-inline' 'self'; frame-src 'self';"
-
-[build.environment]
-# [context.production.branch-deploy]
-#     command = "mv robots-disallow.txt robots.txt"
-
-[context.production]
-    command = "mv robots-production.txt robots.txt"
